@@ -1,3 +1,28 @@
+<<<<<<< Updated upstream
+=======
+//Backend Logic
+function Animal(type, name, age, gender, bio) {
+  this.type = type;
+  this.name = name;
+  this.age = age;
+  this.gender = gender;
+  this.bio = bio;
+}
+
+Animal.prototype.addAnimal = function() {
+  return '<div class="profile row">' +
+            '<div class="col-md-4"><img src="cat.jpg" alt="cat"></div>' +
+            '<div class="col-md-8">' +
+            '<h3>' + this.name + '</h3>' +
+            '<h4>' + this.gender + '</h4>' +
+            '<h6>' + this.age + '</h6>' +
+            '<p>' + this.bio + '</p>'  +
+            '</div>' +
+              '<button type="button" name="adopt" class="btn btn-success adopt-btn">Adopt</button>' +
+          '</div>'
+}
+
+>>>>>>> Stashed changes
 $(document).ready(function() {
   $("form#animal").submit(function(event) {
     event.preventDefault();
@@ -9,9 +34,9 @@ $(document).ready(function() {
     var newAnimal = new Animal (animalType, animalName, animalAge, animalSex, animalBio);
 
     $("#all-pets").append(newAnimal.addAnimal());
-  });
-  $('.adopt-btn').click(function(){
-    $(this).parent().addClass('adopted');
+    $('.adopt-btn').click(function(){
+      $(this).parent().addClass('adopted');
+    });
   });
   $('#show-all').click(function(){
     $('.profile').show();
