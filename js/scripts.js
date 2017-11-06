@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 //Backend Logic
 function Animal(type, name, age, gender, bio) {
   this.type = type;
@@ -22,7 +20,6 @@ Animal.prototype.addAnimal = function() {
           '</div>'
 }
 
->>>>>>> Stashed changes
 $(document).ready(function() {
   $("form#animal").submit(function(event) {
     event.preventDefault();
