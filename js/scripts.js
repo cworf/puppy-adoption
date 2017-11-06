@@ -5,11 +5,12 @@ function Animal(type, name, age, gender, bio) {
   this.age = age;
   this.gender = gender;
   this.bio = bio;
+  this.image = type + ".jpg";
 }
 
 Animal.prototype.addAnimal = function() {
   return '<div class="profile row">' +
-            '<div class="col-md-4"><img src="cat.jpg" alt="cat"></div>' +
+            '<div class="col-md-4"><img src="img/' + this.image + '" alt="' + this.type + '"></div>' +
             '<div class="col-md-8">' +
             '<h3>' + this.name + '</h3>' +
             '<h4>' + this.gender + '</h4>' +
@@ -27,7 +28,7 @@ $(document).ready(function() {
     var animalName = $("input#pet-name").val();
     var animalAge = parseInt($("input#pet-age").val());
     var animalSex = $("input[name=sex]:checked").val();
-    var animalBio = $('input#bio').val();
+    var animalBio = $('textarea#bio').val();
     var newAnimal = new Animal (animalType, animalName, animalAge, animalSex, animalBio);
 
     $("#all-pets").append(newAnimal.addAnimal());
