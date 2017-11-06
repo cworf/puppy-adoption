@@ -9,7 +9,7 @@ function Animal(type, name, age, gender, bio) {
 
 Animal.prototype.addAnimal = function() {
   return '<div class="profile row">' +
-            '<img src="cat.jpg" alt="cat" class="col-md-4"' +
+            '<div class="col-md-4"><img src="cat.jpg" alt="cat"></div>' +
             '<div class="col-md-8">' +
             '<h3>' + this.name + '</h3>' +
             '<h4>' + this.gender + '</h4>' +
@@ -31,9 +31,9 @@ $(document).ready(function() {
     var newAnimal = new Animal (animalType, animalName, animalAge, animalSex, animalBio);
 
     $("#all-pets").append(newAnimal.addAnimal());
-  });
-  $('.adopt-btn').click(function(){
-    $(this).parent().addClass('adopted');
+    $('.adopt-btn').click(function(){
+      $(this).parent().addClass('adopted');
+    });
   });
   $('#show-all').click(function(){
     $('.profile').show();
