@@ -11,7 +11,7 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-4">
           <form id="animal" action="index.html" method="post">
             <div class="form-group">
                 <label for="animal-type">Animal Type</label>
@@ -27,12 +27,18 @@
               <div class="form-group">
                 <input type="number" id="pet-age" placeholder="Pet's Age">
               </div>
+
               <div class="form-group">
                 <label for="male">Male</label><input id="male" type="radio" name="sex" value="male" >
                 <label for="female">Female</label><input id="female" type="radio" name="sex" value="female">
               </div>
+              <div class="form-gorup">
+                <label for="bio">Bio:</label>
+                <textarea name="bio" form="animal" rows="8" cols="80" id="bio"></textarea>
+              </div>
               <button type="submit">Submit</button>
           </form>
+
         </div>
         <div class="col-md-9">
           <div class="row">
@@ -47,15 +53,7 @@
             </div>
           </div>
           <div class="" id="all-pets">
-            <div class="profile row">
-              <div class="col-md-4">
-                image
-              </div>
-              <div class="col-md-8 ">
-                stuff here
-              </div>
-              <button type="button" class="btn btn-primary adopt-btn align-right">Adopt</button>
-            </div>
+            
           </div>
         </div>
       </div>
