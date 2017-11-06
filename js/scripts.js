@@ -7,6 +7,8 @@ $(document).ready(function() {
     var animalSex = $("input[name=sex]:checked").val();
     var animalBio = $('input#bio').val();
     var newAnimal = new Animal (animalType, animalName, animalAge, animalSex, animalBio);
+
+    $("#all-pets").append(newAnimal.addAnimal());
   });
   $('.adopt-btn').click(function(){
     $(this).parent().addClass('adopted');
