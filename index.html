@@ -6,9 +6,42 @@
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
     <meta charset="utf-8">
-    <title>Template</title>
+    <title>Puppy Rescue</title>
   </head>
   <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <form id="animal" action="index.html" method="post">
+            <div class="form-group">
+                <label for="animal-type">Animal Type</label>
+                <select class="form-control" id="pet-type">
+                  <option>dog</option>
+                  <option>cat</option>
+                  <option>bird</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input type="text" id="pet-name" placeholder="Pet's Name">
+              </div>
+              <div class="form-group">
+                <input type="number" id="pet-age" placeholder="Pet's Age">
+              </div>
+              <div class="form-group">
+                <label for="male">Male</label><input id="male" type="radio" name="sex" value="male" >
+                <label for="female">Female</label><input id="female" type="radio" name="sex" value="female">
+              </div>
+              <button type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="col-md-9">
+          <div class="" id="all-pets">
+            
+          </div>
+        </div>
+      </div>
 
+
+    </div>
   </body>
 </html>
